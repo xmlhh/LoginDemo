@@ -7,13 +7,12 @@
         <shape xmlns:android="http://schemas.android.com/apk/res/android"
             android:shape="rectangle">
             <!--透明："@android:color/transparent"-->
-            <solid android:color="#FFFFFF" />
+            <solid android:color="@android:color/transparent" />
             <corners android:radius="20dip"/>
             <stroke
                 android:width="1dip"
-                android:color="#1077B5" />
+                android:color="#3c8dbc" />
         </shape>
-
     </item>
 
     <item android:state_focused="true" >
@@ -22,11 +21,11 @@
         <shape xmlns:android="http://schemas.android.com/apk/res/android"
             android:shape="rectangle">
             <!--透明："@android:color/transparent"-->
-            <solid android:color="#FFFFFF" />
+            <solid android:color="@android:color/transparent" />
             <corners android:radius="20dip"/>
             <stroke
                 android:width="1dip"
-                android:color="#1077B5" />
+                android:color="#1B89CA"/>
         </shape>
     </item>
 

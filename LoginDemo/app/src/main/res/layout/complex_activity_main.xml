@@ -61,7 +61,7 @@
 			android:layout_height="150dp"
 			android:layout_alignParentTop="true"
 			android:layout_centerHorizontal="true"
-			android:layout_marginTop="60dp"
+			android:layout_marginTop="40dp"
 			android:layout_marginBottom="20dp"
 			android:scaleType="fitXY"
 			android:layout_centerVertical="true"
@@ -89,6 +89,7 @@
 				android:paddingRight="60dp" 
 				android:hint="手机号码/用户名"
 				android:textColorHint="#95A1AA"
+				android:textCursorDrawable="@null"
 				android:background="@drawable/edittext_selector"
 				android:singleLine="true" />
 
@@ -135,6 +136,7 @@
                 android:paddingRight="60dp"
 				android:hint="密码"
 				android:textColorHint="#95A1AA"
+				android:textCursorDrawable="@null"
 				android:background="@drawable/edittext_selector"
 				android:inputType="textPassword"
 				android:singleLine="true" />
