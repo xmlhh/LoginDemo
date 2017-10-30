@@ -11,7 +11,7 @@
         控件靠左边：垂直布局+left -->
     <!--菜单-->
     <LinearLayout
-        android:id="@+id/title"
+        android:id="@+id/title_layout"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_alignParentTop="true"
@@ -51,10 +51,10 @@
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="50dp"
 		android:layout_marginRight="50dp"
-        android:layout_below="@+id/title"
+        android:layout_below="@+id/title_layout"
 		android:gravity="center" >
 		
-		<!--图像视图-->
+		<!--登录界面图像-->
 		<ImageView
 			android:id="@+id/user_icon"
 			android:layout_width="150dp"
@@ -67,7 +67,8 @@
 			android:layout_centerVertical="true"
 			android:padding="5dp"
 			android:background="@mipmap/battery" />
-				
+
+		<!--用户名行布局-->
 		<FrameLayout 
 			android:id="@+id/username_layout"
 			android:layout_width="fill_parent"
@@ -90,7 +91,8 @@
 				android:textColorHint="#95A1AA"
 				android:background="@drawable/edittext_selector"
 				android:singleLine="true" />
-			
+
+			<!--用户图标-->
 			<ImageView 
 				android:layout_width="22dp"
 				android:layout_height="21dp"
@@ -99,6 +101,7 @@
 				android:background="@mipmap/user"
 				android:visibility="visible" /> 
 
+			<!--隐藏删除用户名按钮-->
 			<Button 
 				android:id="@+id/del_username_btn"
 				android:layout_width="35dp"
@@ -108,8 +111,9 @@
                 android:layout_marginTop="2dp"
 				android:background="@mipmap/delete"
                 android:visibility="invisible" />
-		</FrameLayout> 
-		
+		</FrameLayout>
+
+		<!--密码行布局-->
 		<FrameLayout 
 			android:id="@+id/passwd_layout"
 			android:layout_width="fill_parent"
@@ -134,14 +138,16 @@
 				android:background="@drawable/edittext_selector"
 				android:inputType="textPassword"
 				android:singleLine="true" />
-		
+
+			<!--密码图标-->
 			<ImageView 
 				android:layout_width="22dp"
 				android:layout_height="21dp"
 				android:layout_gravity="left|center_vertical"
                 android:layout_marginLeft="20dp"
 				android:background="@mipmap/passwd" />
-				
+
+			<!--隐藏显示密码按钮-->
 			<Button 
 				android:id="@+id/passwd_eye_btn"
 				android:layout_width="35dp"
@@ -151,7 +157,8 @@
                 android:layout_marginTop="2dp"
 				android:background="@mipmap/eye"
                 android:visibility="invisible"  />
-				
+
+			<!--隐藏删除密码按钮-->
 			<Button 
 				android:id="@+id/del_passwd_btn"
 				android:layout_width="35dp"
@@ -163,6 +170,26 @@
                 android:visibility="invisible" />
 		</FrameLayout>
 
+		<!--记住账号和密码的勾选框-->
+		<CheckBox
+			android:id="@+id/remember_pwd"
+			android:layout_width="wrap_content"
+			android:layout_height="40dp"
+			android:layout_alignLeft="@+id/passwd_layout"
+			android:layout_below="@+id/passwd_layout"
+			android:layout_marginLeft="15dp"
+			android:layout_marginTop="5dp"
+			android:gravity="left|center_vertical"
+			android:text="记住账号"
+			android:textColor="@android:color/white"
+			android:textSize="16sp"
+
+			android:drawablePadding="5dp"
+			android:paddingLeft="0dp"
+			android:drawableLeft="@mipmap/box_checked"
+			android:button="@null" />
+
+		<!--忘记密码的按钮-->
         <Button
             android:id="@+id/forgive_pwd"
             android:layout_width="wrap_content"
@@ -175,24 +202,7 @@
             android:textColor="@android:color/white"
             android:textSize="16sp" />
 
-        <CheckBox
-            android:id="@+id/remember_pwd"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_alignLeft="@+id/passwd_layout"
-            android:layout_below="@+id/passwd_layout"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:gravity="left|center_vertical"
-            android:text="记住账号"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-
-            android:drawablePadding="5dp"
-            android:paddingLeft="0dp"
-            android:drawableLeft="@mipmap/box_checked"
-            android:button="@null" />
-
+		<!--登录按钮-->
         <Button
             android:id="@+id/login_btn"
             android:layout_width="match_parent"
