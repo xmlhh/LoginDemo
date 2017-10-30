@@ -89,7 +89,8 @@
 				android:paddingRight="60dp" 
 				android:hint="手机号码/用户名"
 				android:textColorHint="#95A1AA"
-				android:textCursorDrawable="@null"
+				android:textColor="@android:color/white"
+				android:textCursorDrawable="@drawable/edittext_cursor"
 				android:background="@drawable/edittext_selector"
 				android:singleLine="true" />
 
@@ -136,7 +137,8 @@
                 android:paddingRight="60dp"
 				android:hint="密码"
 				android:textColorHint="#95A1AA"
-				android:textCursorDrawable="@null"
+				android:textColor="@android:color/white"
+				android:textCursorDrawable="@drawable/edittext_cursor"
 				android:background="@drawable/edittext_selector"
 				android:inputType="textPassword"
 				android:singleLine="true" />
