@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/sea" >
+
+    <!-- 控件在靠左边：水平布局+
+        android:gravity="center_vertical"
+        android:orientation="horizontal" > -->
+    <!--控件靠右边：垂直布局+right
+        控件靠左边：垂直布局+left -->
+    <!--菜单-->
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/menu_1"
+        android:gravity="right|center"
+        android:orientation="vertical" >
+
+        <!--右上角的注册-->
+        <!--android:textColor="#ff288dfe"-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:text="注册"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <!--
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/menu_1"
+        android:gravity="right|center"
+        android:orientation="vertical" >
+        <include layout="@layout/menu" />
+
+    </LinearLayout> -->
+
+
+	
+	<RelativeLayout 
+		android:id="@+id/login_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="50dp"
+		android:layout_marginRight="50dp"
+        android:layout_below="@+id/title"
+		android:gravity="center" >
+		
+		<!--图像视图-->
+		<ImageView
+			android:id="@+id/user_icon"
+			android:layout_width="150dp"
+			android:layout_height="150dp"
+			android:layout_alignParentTop="true"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="60dp"
+			android:layout_marginBottom="20dp"
+			android:scaleType="fitXY"
+			android:layout_centerVertical="true"
+			android:padding="5dp"
+			android:background="@mipmap/battery" />
+				
+		<FrameLayout 
+			android:id="@+id/username_layout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+            android:layout_below="@+id/user_icon"
+            android:layout_marginTop="5dp"
+			android:gravity="center" > 
+
+			<!--用户名编辑框-->
+			<EditText
+				android:id="@+id/login_input_username"
+				android:layout_width="match_parent"
+				android:layout_height="45dp"
+				android:layout_marginRight="5dp"
+				android:layout_margin="10dp"
+				android:minHeight="40dp"
+				android:paddingLeft="40dp"
+				android:paddingRight="60dp" 
+				android:hint="手机号码/用户名"
+				android:textColorHint="#95A1AA"
+				android:background="@drawable/edittext_selector"
+				android:singleLine="true" />
+			
+			<ImageView 
+				android:layout_width="22dp"
+				android:layout_height="21dp"
+				android:layout_gravity="left|center_vertical"
+				android:layout_marginLeft="20dp"
+				android:background="@mipmap/user"
+				android:visibility="visible" /> 
+
+			<Button 
+				android:id="@+id/del_username_btn"
+				android:layout_width="35dp"
+				android:layout_height="35dp"
+				android:layout_gravity="right|center_vertical"
+				android:layout_marginRight="20dp"
+                android:layout_marginTop="2dp"
+				android:background="@mipmap/delete"
+                android:visibility="invisible" />
+		</FrameLayout> 
+		
+		<FrameLayout 
+			android:id="@+id/passwd_layout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/username_layout"
+			android:layout_marginTop="0dp"
+			android:gravity="center" > 
+			
+			<!--密码编辑框-->
+			<EditText
+				android:id="@+id/login_input_password"
+				android:layout_width="match_parent"
+				android:layout_height="45dp"
+				android:layout_weight="1"
+				android:layout_margin="10dp"
+				android:minHeight="40dp"
+				android:maxLength="20"
+                android:paddingLeft="40dp"
+                android:paddingRight="60dp"
+				android:hint="密码"
+				android:textColorHint="#95A1AA"
+				android:background="@drawable/edittext_selector"
+				android:inputType="textPassword"
+				android:singleLine="true" />
+		
+			<ImageView 
+				android:layout_width="22dp"
+				android:layout_height="21dp"
+				android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="20dp"
+				android:background="@mipmap/passwd" />
+				
+			<Button 
+				android:id="@+id/passwd_eye_btn"
+				android:layout_width="35dp"
+				android:layout_height="35dp"
+				android:layout_gravity="right|center_vertical"
+				android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+				android:background="@mipmap/eye"
+                android:visibility="invisible"  />
+				
+			<Button 
+				android:id="@+id/del_passwd_btn"
+				android:layout_width="35dp"
+				android:layout_height="35dp"
+				android:layout_gravity="right|center_vertical"
+				android:layout_marginRight="45dp"
+                android:layout_marginTop="2dp"
+				android:background="@mipmap/delete"
+                android:visibility="invisible" />
+		</FrameLayout>
+
+        <Button
+            android:id="@+id/forgive_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/passwd_layout"
+            android:layout_below="@+id/passwd_layout"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:text="忘记密码?"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/remember_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/passwd_layout"
+            android:layout_below="@+id/passwd_layout"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:gravity="left|center_vertical"
+            android:text="记住账号"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+
+            android:drawablePadding="5dp"
+            android:paddingLeft="0dp"
+            android:drawableLeft="@mipmap/box_checked"
+            android:button="@null" />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/passwd_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="60dp"
+
+            android:text="登录"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:background="@drawable/button_selector"
+            android:gravity="center" />
+
+    </RelativeLayout>
+</RelativeLayout>
